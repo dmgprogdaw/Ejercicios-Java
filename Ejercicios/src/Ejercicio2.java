@@ -6,27 +6,47 @@ public class Ejercicio2 {
 		
 		Scanner teclado = new Scanner (System.in);
 		
-		float sueldoBase;
-		int ventas;
-		double comision;
-		double sueldoFinal;
+		float venta1, venta2, venta3;
+		float comision1, comision2, comision3;
+		final float sueldo = 1200;
+		final float porcentaje = 0.1f;
 		
-		//Sueldo base
-		System.out.println("Introduce el sueldo base: "); 
-		sueldoBase = teclado.nextFloat();
+		System.out.println("Valor de la venta 1: ");
+		venta1 = teclado.nextFloat();
+		comision1 = venta1 * porcentaje;
 		
-		//Número de ventas realizadas en un mes
-		System.out.println("Introduce el número de ventas: "); 
-		ventas = teclado.nextInt();
+		System.out.println("Valor de la venta 2: ");
+		venta2 = teclado.nextFloat();
+		comision2 = venta2 * porcentaje;
 		
-		//Comision total por todas las ventas
-		comision = ventas * 0.10;
+		System.out.println("Valor de la venta 3: ");
+		venta3 = teclado.nextFloat();
+		comision3 = venta3 * porcentaje;
 		
-		//Sueldo más la comision
-		sueldoFinal = sueldoBase + (sueldoBase*comision);
+		System.out.println("Comision venta 1: " + comision1);
+		System.out.println("Comision venta 2: " + comision2);
+		System.out.println("Comision venta 3: " + comision3);
 		
-		//Resultado
-		System.out.println("El sueldo al final del mes sera: " + sueldoFinal + " euros");
+		System.out.println("Sueldo final: " + (comision1 + comision2 + comision3 + sueldo));
 		teclado.close();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
