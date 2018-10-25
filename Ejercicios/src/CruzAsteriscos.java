@@ -1,16 +1,24 @@
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class CruzAsteriscos {
 
+	static Scanner teclado = new Scanner(System.in);
+	static  int obtenerFC(String fc) {
+		int x;		
+		do {
+			System.out.println("Introduce el número de " + fc +": ");
+			x = teclado.nextInt();
+			if (x < 3 || x % 2 == 0) {
+				System.out.println("El número de " + fc + " es incorrecto, vuelve a introducirlo");
+			}
+		}while (x < 3 || x % 2 == 0);		
+		return x;
+	}
+	
+	
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int N; //Número de columnas - Número impar mayor que 3
-		int M; //Número de lineas - Número impar mayor que 3
-		
-		System.out.println("Introduce el número de columnas");
-		N = teclado.nextInt();
-		System.out.println("Introduce el número de lineas");
-		M = teclado.nextInt();
+		int N = obtenerFC("filas") ;
+		int M = obtenerFC("columnas");
 //Version 3
 		for(int i=0; i<N; i++) {
 			for(int j=0; j<M; j++) {			
@@ -19,7 +27,7 @@ public class Ejercicio1 {
 			System.out.println();
 		}
 
-		teclado.close();
+	teclado.close();
 	}
 }
 //Version 1

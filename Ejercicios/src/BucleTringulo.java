@@ -10,13 +10,18 @@ public class BucleTringulo {
 		for(int i=1; i<=10; i++) {
 			n = i % 10;
 			espacios = 10 -i;
-			digitos = i + 1 - 1;
+			digitos = i + i - 1;
 
 			for(int j=0; j<espacios; j++) 
 				System.out.print(" ");
 		
 			for(int b=0; b<digitos; b++) {			
-				System.out.print(n);
+				if(b >= digitos /2) {
+					System.out.print(n-- % 10);
+				}
+				else if(b <= digitos) {
+					System.out.print(n++ % 10);
+				}
 			}
 		System.out.println();
 		}
