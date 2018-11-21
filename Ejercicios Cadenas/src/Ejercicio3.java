@@ -9,7 +9,6 @@ public class Ejercicio3 {
 		String primeraCadena;
 		String segundaCadena;
 		do {
-
 			System.out.println("Escribe la primera cadena de texto:");
 			primeraCadena = in.nextLine();
 		} while (primeraCadena.length() == 0);
@@ -22,10 +21,12 @@ public class Ejercicio3 {
 		int c = 0;
 		do {
 			i = primeraCadena.indexOf(segundaCadena, i);
-			if (i >= 0)
+			if (i >= 0) {
 				c++;
 				i++;
+			}
 		} while (i >= 0);
 		System.out.println("La segunda esta contenida " + c + " veces en la primera");
+		in.close();
 	}
 }

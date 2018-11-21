@@ -59,5 +59,6 @@ public class Ejercicio1 {
 		System.out.println("La vocal i se repite " + cont_i + " veces");
 		System.out.println("La vocal o se repite " + cont_o + " veces");
 		System.out.println("La vocal u se repite " + cont_u + " veces");
+		in.close();
 	}
 }
